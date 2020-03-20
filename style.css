@@ -1,0 +1,67 @@
+:root {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: brown;
+	color: wheat;
+	text-align: center;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+#sudoku-table {
+	width: 50%;
+	margin: 2.725rem auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 0.5rem;
+	font-size: 1.525rem;
+}
+
+.sudoku-subtable {
+	display: flex;
+	justify-content: center;
+}
+
+.sudoku-start-col {
+	justify-content: end;
+}
+
+.sudoku-end-col {
+	justify-content: start;
+}
+
+.sudoku-subtable tbody {
+	background-color: purple;
+}
+
+.cell {
+	background-color: darkmagenta;
+	padding: 0.5rem 0.725rem
+}
+
+.controls {
+	width: 50%;
+	margin: auto;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.button {
+	width: 124px;
+	height: 42px;
+	background-color: darkslateblue;
+	cursor: pointer;
+	line-height: 42px;
+	border-radius: 5px;
+	transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button:hover {
+	transform: scale(1.075);
+}
