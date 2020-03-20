@@ -2,47 +2,62 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	--background-color: #A6E1FA;
+	--cell-color: #0A2472;
+	--border-color: #001C55;
+	--text-color: #A6E1FA;
+	--button-color: #00072D;
 }
 
 body {
-	background-color: brown;
-	color: wheat;
+	background-color: var(--background-color);
+	color: var(--text-color);
 	text-align: center;
 }
 
 h1 {
 	font-size: 2rem;
+	color: var(--button-color);
 }
 
 #sudoku-table {
 	width: 50%;
 	margin: 2.725rem auto;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 0.5rem;
+	display: flex;
+	justify-content: center;	
 	font-size: 1.525rem;
+}
+
+.tablerow {
+	border: 2px solid var(--border-color);
+	border-left: none;
+	border-right: none;
+}
+
+.tablerow:nth-child(1) {
+	border-left: 2px solid var(--border-color);
+}
+
+.tablerow:nth-child(3) {
+	border-right: 2px solid var(--border-color);
 }
 
 .sudoku-subtable {
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	border: 2px solid var(--border-color);
 }
 
-.sudoku-start-col {
-	justify-content: end;
-}
-
-.sudoku-end-col {
-	justify-content: start;
-}
-
-.sudoku-subtable tbody {
-	background-color: purple;
+.row {
+	display: flex;
+	flex-direction: row;
 }
 
 .cell {
-	background-color: darkmagenta;
-	padding: 0.5rem 0.725rem
+	background-color: var(--cell-color);
+	padding: 0.5rem 0.725rem;
+	border: 2px solid var(--border-color);
 }
 
 .controls {
@@ -55,7 +70,7 @@ h1 {
 .button {
 	width: 124px;
 	height: 42px;
-	background-color: darkslateblue;
+	background-color: var(--button-color);
 	cursor: pointer;
 	line-height: 42px;
 	border-radius: 5px;
